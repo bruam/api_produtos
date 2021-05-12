@@ -1,6 +1,6 @@
 const express = require('express');
 const rotas = express.Router();
-const produtoController = require('../controller/produto_controller')
+const usuarioController = require('../controller/usuario_controller')
 
 /*
 rotas.get('/:id', (req,res) => {
@@ -20,11 +20,11 @@ rotas.delete('/:id', (req,res) => {
 */
 
 // Com controller
-rotas.get('/', produtoController.listar)
-rotas.post('/', produtoController.inserir)
-rotas.get('/:id', produtoController.buscarPorId)
-rotas.put('/:id', produtoController.atualizar)
-rotas.delete('/:id', produtoController.deletar)
+rotas.get('/', usuarioController.listar)
+rotas.get('/:id', usuarioController.buscarPorId)
+rotas.post('/', usuarioController.inserir)
+rotas.put('/:id', usuarioController.atualizar)
+rotas.delete('/:id', usuarioController.deletar)
 
 
 module.exports = rotas
